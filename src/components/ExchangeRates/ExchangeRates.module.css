@@ -1,0 +1,58 @@
+.title {
+    margin-top: 20px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    letter-spacing: 0.03em;
+    text-align: center;
+}
+
+.select {
+    display: block;
+
+    padding: 4px;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+
+    cursor: pointer;
+
+    font-style: italic;
+
+    transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.select:focus {
+    outline: none;
+    border-color: #2196f3;
+}
+
+.list {
+    width: 150px;
+    text-align: center;
+
+    margin-top: 7px;
+    padding-left: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.list li {
+    line-height: 1.1;
+    letter-spacing: 0.01em;
+    text-align: left;
+}
+
+.list li:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+.cours {
+    margin-right: 4px;
+}

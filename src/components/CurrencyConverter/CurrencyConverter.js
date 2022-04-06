@@ -49,37 +49,51 @@ const CurrencyConverter = () => {
 
     return (
         <>
-            <form>
-                <label>
-                    <span>Enter amount</span>
-                    <input
-                        type="text"
-                        value={amount}
-                        onChange={handleAmountChange}
-                    />
-                </label>
-            </form>
-            <div className={s.list}>
-                <div>
-                    <span>{amount}</span>
-                    <select
-                        value={startCur}
-                        onChange={e =>
-                            setStartCur(e.target.value)
-                        }
-                    >
-                        {options}
-                    </select>
-                </div>
-                <span>=</span>
-                <div>
-                    <span>{endAmount}</span>
-                    <select
-                        value={endCur}
-                        onChange={e => setEndCur(e.target.value)}
-                    >
-                        {options}
-                    </select>
+            <div className={s.converter}>
+                <form className={s.form}>
+                    <label>
+                        <span>Enter amount</span>
+                        <input
+                            type="text"
+                            value={amount}
+                            onChange={handleAmountChange}
+                        />
+                    </label>
+                </form>
+                <div className={s.list}>
+                    <div>
+                        <span className={s.amount}>
+                            {startCur === 'select currency'
+                                ? ''
+                                : amount}
+                        </span>
+                        <select
+                            value={startCur}
+                            onChange={e =>
+                                setStartCur(e.target.value)
+                            }
+                        >
+                            {options}
+                        </select>
+                    </div>
+                    <span className={s.equals}> = </span>
+                    <div>
+                        <span className={s.amount}>
+                            {isNaN(endAmount) ||
+                            Number(endAmount) === 0 ||
+                            endCur === 'select currency'
+                                ? ''
+                                : endAmount}
+                        </span>
+                        <select
+                            value={endCur}
+                            onChange={e =>
+                                setEndCur(e.target.value)
+                            }
+                        >
+                            {options}
+                        </select>
+                    </div>
                 </div>
             </div>
         </>

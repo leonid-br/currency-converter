@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 
 import Header from './Header';
 import CurrencyConverter from './CurrencyConverter';
+import ExchangeRates from './ExchangeRates';
 
 import './App.css';
 
@@ -14,7 +15,10 @@ function App() {
                     path="/currency-converter"
                     element={<CurrencyConverter />}
                 />
-                {/* <Route path="/exchange-rates" element={} /> */}
+                <Route
+                    path="/exchange-rates"
+                    element={<ExchangeRates />}
+                />
             </Routes>
         </div>
     );

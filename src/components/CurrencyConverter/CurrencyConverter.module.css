@@ -1,3 +1,73 @@
+.converter {
+    text-align: center;
+}
+
+.form {
+    margin-top: 20px;
+}
+
 .list {
     display: flex;
+    justify-content: center;
+
+    margin-top: 15px;
+}
+
+label span {
+    margin-right: 5px;
+
+    line-height: 1.1;
+    letter-spacing: 0.01em;
+}
+
+label input {
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+
+    padding: 4px;
+
+    cursor: pointer;
+
+    transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+label input:focus {
+    outline: none;
+    border-color: #2196f3;
+    cursor: text;
+}
+
+.list select {
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+
+    padding: 4px;
+
+    cursor: pointer;
+
+    font-style: italic;
+    font-weight: bold;
+
+    transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.list select:focus {
+    outline: none;
+    border-color: #2196f3;
+}
+
+.equals {
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 4px;
+}
+
+.amount {
+    font-weight: bold;
+
+    margin-right: 3px;
 }
